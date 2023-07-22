@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Blog Website Design </title>
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+<!-- <style>:root{
+    --orange:#e67e22;
+    --black:#333;
+    --light-color:#777;
+    --border:.1rem solid rgba(0,0,0,.2);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+ul{
+    font-size: 1.2rem;
+}
+
+section{
+    padding: 2rem 7%;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    background: var(--black);
+    color: #fff;
+    border-radius: .5rem;
+    padding: 1.0rem 3rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+.btn:hover{
+    background-color: var(--orange);
+}
+.header{
+    position: fixed;
+    top: 0; left:0; right: 0;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 7%;
+}
+
+.header .logo{
+    color: var(--black);
+    font-size: 2.5rem;
+    margin-right: auto;
+}
+
+.header .logo span{
+    color: var(--orange);
+}
+.header .navbar a{
+    color: var(--light-color);
+    margin-right: 2rem;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+}
+.header .navbar a:hover{
+    color: var(--orange);
+}
+
+.header .icons i{
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    color: var(--black);
+    background: #eee;
+    border-radius: 50%;
+    margin-left: .7rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    }
+.header .icons i:hover{
+    color: #fff;
+    background: var(--orange);
+}
+/* .header .search-form{
+    position: absolute;
+    background: #fff;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    top: 110%;
+    right: 7%;
+    height: 6rem;
+    width: 50rem;
+    padding: 1rem;
+} */
+.header .search-form {
+    position: absolute;
+    background: lightcyan;
+    border-radius: 9rem;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    top: 116%;
+    right: 3%;
+    height: 5rem;
+    width: 30.5rem;
+    padding: 3rem;
+}
+
+.header .search-form.active{
+    display: flex;
+}
+.header .search-form #search-box{
+    width: 100%;
+    border:var(--border);
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: var(--black);
+    height: 100%;
+}
+.header .search-form label{
+    font-size: 2rem;
+    padding-left: .5rem;
+    padding-right: 1rem;
+    cursor: pointer;
+    color: var(--black);
+}
+.header .search-form label:hover{
+    color: var(--orange);
+}
+#menu-bars{
+    display: none;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer .credit{
+    text-transform: capitalize;
+    font-size: 2rem;
+    color: var(--black);
+    padding: 1rem;
+}
+.follow .credit span{
+    color: var(--orange);
+}
+.footer .follow{
+    padding: 1rem 0;
+}
+.footer .follow a{
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    border-radius:50%;
+    font-size: 1.7rem;
+    background: var(--black);
+    color: #fff;
+    margin: 0 .1rem;
+    text-align: center;
+}
+.footer .follow a:hover{
+    background: var(--orange);
+}
+
+
+
+
+
+
+/* media queries */
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 1.5rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+    .container{
+        grid-template-columns: 2r 1fr;
+        
+    }
+
+}
+@media(max-width:768px){
+    #menu-bars{
+     display:inline-block;
+    }
+
+    .header .search-form{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-top: var(--border);
+        width: 100%;
+        border-radius: 0;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-top: var(--border);
+        border-bottom: var(--border);
+        background: #fff;
+        display: none;
+    }
+    .header .navbar .active{
+        display: block;
+    }
+
+    .header .navbar a{
+        display: block;
+        background: #f7f7f7;
+        padding: 1.5rem;
+        margin: 1.5rem;
+        border-radius: .5rem;
+        border: var(--border);
+    }
+}
+
+ .banner{
+    min-height: 90vh;
+    /* background-color: url(../images/jasim1.jpg);no-repeat; */
+
+    background-image: url('banner.jpeg'); no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items: center;
+    padding-top: 8rem;
+}
+.banner .content{
+    text-align: center;
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    padding: 3rem;
+    max-width: 50rem;
+}
+.banner .content h3{
+    font-size: 4rem;
+    color: var(--black);
+    text-transform: uppercase;
+}
+.banner .content p{
+    font-size: 1.7rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 2.5r 1fr;
+    gap: 1.5rem;
+    backgroung:#eee;
+}
+
+.container .posts-container .post{
+    width: 100%;
+    padding: 2rem;
+    background: #fff;
+    border: var(--border);
+    border-radius: .5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+.container .posts-container .post .image{
+    height: 40rem;
+    width: 100%;
+    border-radius: .5rem;
+    object-fit: cover;
+    
+}
+
+.footer{
+    flex-flow: column;
+    text-align: center;
+}
+
+.container .posts-container .post .date{
+    padding-top: 2rem;
+    font-size: 1.5rem;
+    color: var(--orange);
+}
+.container .posts-container .post .title{
+    padding-top: 1.5rem;
+    font-size: 2.5rem;
+    columns: var(--black);
+}
+.container .posts-container .post .text{
+    color: var(--light-color);
+    font-size: 1.6rem;
+    line-height: 1.7rem;
+    padding: 1rem 0;
+}
+.container .posts-container .links{
+    border-top: var(--border);
+    margin-top: .5rem;
+    padding-top: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+.container .posts-container .links .user{
+    margin-right: auto;
+}
+.container .posts-container .links .icon{
+    padding-right: 1rem;
+}
+.container .posts-container .links a{
+    font-size: 1.5rem;
+    color: var(--light-color);
+}
+.container .posts-container .links a i{
+    padding-right: .2rem;
+    color: var(--black);
+}
+.container .posts-container .links a:hover{
+    color: var(--orange);
+}
+.container .posts-container .links a:hover i{
+    color: var(--orange);
+}
+.container .sidebar .box{
+    border: var(--border);
+    border-radius: .5rem;
+    overflow: hidden;
+    background: #fff;
+    margin-bottom: 1.5rem;
+}
+.container .sidebar .box .title{
+    padding: 1.5rem;
+    font-size: 2rem;
+    color: var(--black);
+    backgroung:var(--black);
+    text-transform: capitalize;
+}
+.container .sidebar .box .about{
+    text-align: center;
+    padding: 1rem 1.5rem;
+}
+.container .sidebar .box .about img{
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 1rem 0;
+}
+.container .sidebar .box .about h3{
+    color: var(--orange);
+    font-size: 2rem;
+}
+.container .sidebar .box .about p{
+    color: var(--light-color);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding: 1rem;
+}
+.container .sidebar .box .about .follow{
+    padding: 1rem;
+}
+.container .sidebar .box .about .follow a{
+    height: 4rem;
+    line-height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background: var(--black);
+    color: #fff;
+    font-size: 1.7rem;
+    margin: 0 .1rem;
+}
+.container .sidebar .box .about .follow a:hover{
+    background:var(--orange);
+    
+}
+.container .sidebar .box .category{
+    padding:1rem 1.5rem;
+}
+.container .sidebar .box .category a{
+    padding: .4rem;
+    font-size: 1.5rem;
+    color: var(--black);
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .sidebar .box .category a span{
+    background: var(--light-color);
+    color: black;
+    border-radius: .5rem;
+    padding: .5rem;
+}
+.container .sidebar .box .category a:hover{
+    color: var(--orange);
+}
+.container .sidebar .box .category a:hover span{
+    background-color: var(--orange);
+}
+.container .sidebar .box .p-post{
+    padding: 1rem 2rem;
+}
+.container .sidebar .box .p-post a{
+    padding: 1rem 0;
+    display: block;
+
+}
+.container .sidebar .box .p-post a h3{
+    color: var(--black);
+    font-size: 2rem;
+    padding-bottom:  1rem;
+}
+.container .sidebar .box .p-post a span{
+    color: var(--light-color);
+    font-size: 1.5rem;
+}
+.container .sidebar .box .p-post a span i{
+    padding: right:.2rem;
+}
+.container .sidebar .box .p-post a:hover h3{
+    color: var(--orange);
+}
+
+.container .sidebar .box .tags{
+    padding: 1rem;
+}
+.container .sidebar .box .tags a{
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    color: var(--black);
+    border-radius: .5rem;
+    border: var(--border);
+    margin: .5rem;
+}
+.container .sidebar .box .tags a:hover{
+    background:var(--black);
+    color: #fff;
+}
+.contact{
+    /* background:url(../images/contact-bg.jpg) no-repeat; */
+    background-image: url('jasim1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.contact form{
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    margin: 2rem auto;
+    max-width: 70rem;
+    padding: 2rem;
+}
+.contact form h3{
+    color: var(--black);
+    text-align: center;
+    padding-bottom: 1.5rem;
+    font-size: 3rem;
+    text-transform: capitalize;
+}
+.contact form .inputBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/* .contact form .inputBox input, */
+.contact form textarea{
+    width: 100%;
+    background: #eee;
+    padding: 1rem;
+    margin: .7rem 0;
+    border-radius: .5rem;
+    columns: var(--black);
+    font-size: 1.7rem;
+}
+.contact form .inputBox input{
+    width: 49%;
+}
+
+.container{
+    grid-template-columns:1fr;
+    gap: 0;
+    }
+.container .posts-container .post .image{
+    height: 30rem;
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .contact form .inputBox input{
+        width: 100%;
+        margin-right: 33px;
+    }
+}
+</style> -->
+
+
+
+<!-- <script>var menu = document.querySelector('#menu-bars');
+var menu = document.querySelector('active');
+
+menu.onclick = () =>{
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
+    searchIcon.classList.remove('fa-times');
+    searchform.classList.remove('active');
+}
+
+let searchIcon = document.querySelector('#search-icon');
+let searchform = document.querySelector('.search-form');
+
+searchIcon.onclick = () =>{
+    searchIcon.classList.toggle('fa-times');
+    searchform.classList.toggle('active');
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('active');
+}
+
+window.onscroll = () =>{
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('active');
+    searchIcon.classList.remove('fa-times');
+    searchform.classList.remove('active');
+}
+</script> -->
+
+
+
+</head>
+<body>
+    <!-- header section start -->
+    <header class="header">
+        <a href="#" class="logo"> <span>b</span>logger</a>
+        <nav class="navbar">
+            <a href="#banner">banner</a>
+            <a href="#posts">my posts</a>
+            <a href="#contact">contact me</a>
+            </nav>
+
+            <div class="icons">
+                <i class="fas fa-bars" id="menu-bars"></i>
+                <i class="fas fa-search" id="search-icon"></i>
+            </div>
+
+            <form action="" class="search-form">
+                <input type="search" name="" placeholder="search here..." id="" class="search-box">
+
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+    </header>
+    <!-- header section ends -->
+
+    <!-- banner section starts -->
+    <!-- banner section ends -->
+
+
+    <section class="banner" id="banner">
+        <div class="content">
+            <h3>Explore the nature</h3>
+            <p><span>Save Earth Save Life!</span>
+            <ul>
+                <li>Save Water</li>
+                <li>Save forest</li>
+                <li>Save Environment</li>
+                <li>Save Earht</li>
+            </ul></p>
+            <a href="#" class="btn">my blogs</a>
+        </div>
+    </section>
+
+    <!-- post section start -->
+
+    <section class="container" id="posts">
+        <div class="posts-container">
+            <div class="post">
+                <!-- <img src="images/blog-1.jpg" alt="" class="image"> -->
+                <img src="blog-1.jpeg" alt="">
+                <div class="date">
+                    <i class="far fa-clockp"></i>
+                    <span>1st may,2023</span>
+                </div>
+                <h3 class="title">The forest... </h3>
+                <p class="text">We should save the forest, because forest gives us oxygen for our life. Forest is play an important role in our life .  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, voluptate corrupti </p>
+                <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae fugiat vel beatae quas, autem fugit enim sed provident quia! Perferendis saepe repudiandae tempora, ullam beatae iusto molestias voluptatibus id aut?</p>
+                <div class="links">
+                    <a href="#" class="user">
+                        <i class="far fa-user"></i>
+                        <span>by admin</span>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="far fa-comment"></i>
+                        <span>(45)</span>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="far fa-share-aquare"></i>
+                        <span>(29)</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="post">
+                <!-- <img src="images/jasim1.jpg" alt="" class="image"> -->
+                <img src="blog-2.jpeg" alt="blog2">
+                <div class="date">
+                    <i class="far fa-clockp"></i>
+                    <span>1st may,2023</span>
+                </div>
+                <h3 class="title">The Nature... </h3>
+                <p class="text">We should save our nature.Like- tree,hill,water,forest,mountain...etc. We should keep neat and clean and pure our nature for itself as well as our next generation.  Lorem ipsum dolor, sit amet  autem expedita voluptates quibusdam quae veritatis iure?</p>
+                <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae fugiat vel beatae quas, autem fugit enim sed provident quia! Perferendis saepe repudiandae tempora, ullam beatae iusto molestias voluptatibus id aut?</p>
+                <div class="links">
+                    <a href="#" class="user">
+                        <pi class="far fa-user"></i>
+                        <span>by admin</span>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="far fa-comment"></i>
+                        <span>(45)</span>
+                    </a>p
+                    <a href="#" class="icon">
+                        <i class="far fa-share-aquare"></i>
+                        <span>(29)</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="post">
+                <!-- <img src="images/blog-3.jpg" alt="" class="image"> -->
+                <img src="blog-3.jpeg" alt="">
+                <div class="date">
+                    <i class="far fa-clockp"></i>
+                    <span>1st may,2023</span>
+                </div>
+                <h3 class="title">The Water... </h3>
+                <p class="text">We should save the water . It play an important role in our life. Don't waste the water. It is uses in many things..like- drink,wash,bath,cook...etc.  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, voluptate voluptates quibusdam quae veritatis iure?</p>
+                <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae fugiat vel beatae quas, autem fugit enim sed provident quia! Perferendis saepe repudiandae tempora, ullam beatae iusto molestias voluptatibus id aut?</p>
+                <div class="links">
+                    <a href="#" class="user">
+                        <i class="far fa-user"></i>
+                        <span>by admin</span>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="far fa-comment"></i>
+                        <span>(45)</span>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="far fa-share-aquare"></i>
+                        <span>(29)</span>
+                    </a>
+                </div>
+        </div>
+        <div class="sidebar">
+            <div class="box">
+                <h3 class="title">about me</h3>
+                <div class="about">
+                    <!-- <img src="images/jasim1.jpg" alt=""> -->
+                     <img src="jasim1.jpg" alt="user pic">
+
+                    <h3>Md jasim</h3>
+                    <p>I am a student of B.tech(cse) pre-final year in Sanskar College Of Engineering and <br>Technology,Ghaziabad 
+                        <span>(Affiliated from AKTU University)</span>.  </p>
+                    <div class="follow">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
+                </div>
+            </div>
+           <div class="box">
+            <h3 class="title">categories</h3>
+            <div class="category">
+                <a href="#">travel <span>42</span></a>
+                <a href="#">photography <span>75</span></a>
+                <a href="#">technology<span>22</span></a>
+                <a href="#">fashion<span>17</span></a>
+                <a href="#">study <span>48</span></a>
+                <a href="#">science <span>39</span></a>
+                <a href="#">music <span>59</span></a>
+                <a href="#">public <span>12</span></a>
+                <a href="#">business <span>32</span></a>
+                <a href="#">sports <span>18</span></a>
+            </div>
+           </div>
+           <div class="box">
+            <h3 class="title">popular posts</h3>
+            <div class="post">
+                <a href="#">
+                    <h3>01. blog title goes here</h3>
+                    <span><i class="far fa-clock"></i>1st may,2023</span>
+                </a>
+                <a href="#">
+                    <h3>02. blog title goes here</h3>
+                    <span><i class="far fa-clock"></i>1st may,2023</span>
+                </a>
+                <a href="#">
+                    <h3>03. blog title goes here</h3>
+                    <span><i class="far fa-clock"></i>1st may,2023</span>
+                </a>
+                <a href="#">
+                    <h3>04. blog title goes here</h3>
+                    <span><i class="far fa-clock"></i>1st may,2023</span>
+                </a>
+            </div>
+           </div>
+           <div class="box">
+            <h3 class="title">popular tags</h3>
+            <div class="tags">
+                <a href="#">travel</a>
+                <a href="#">photo</a>
+                <a href="#">science</a>
+                <a href="#">biology</a>
+                <a href="#">aliense</a>
+                <a href="#">nature</a>
+                <a href="#">mountain</a>
+                <a href="#">river</a>
+                <a href="#">camp</a>
+                <a href="#">landscape</a>
+                <a href="#">world</a>
+            </div>
+           </div>
+        </div>
+    </section>
+    <!-- post section ends -->
+    <!-- contact section start -->
+ <section class="contact" id="contact">
+    <form action="">
+        <h3>contact me</h3>
+        <div class="inputBox">
+            <input type="text" placeholder="name">
+            <input type="email" placeholder="email">
+        </div>
+        <div class="inputBox">
+            <input type="number" placeholder="number">
+            <input type="text" placeholder="subject">
+        </div>
+        <textarea name="" placeholder="message" id="" cols="30" rows="10"></textarea>
+        <input type="submit" value="send message" class="btn">
+    </form>
+ </section>
+
+    <!-- contact section ends -->
+<!-- footer section start -->
+<section class="footer">
+    <div class="follow">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+    </div>
+    <div class="credit">created by:- <span>mr. Md jasim (Alhamdulillah)web designer</span> | all @right reserved. </div>
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+<!-- custom js file link -->
+<script src="js/script.js"></script>
+</body>
+</html>
